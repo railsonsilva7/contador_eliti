@@ -5,36 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
     <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            text-align: center;
-        }
-        
-        }
-        button {
-            padding: 0;
-            margin: 0;
+         .cont{
+          display: inline-block; /* Faz a div se comportar como um elemento inline (na mesma linha) mas respeitar width/height/margin */
+          width: 150px;
+          margin: 5px; /* Espaçamento */
+          text-align: center;
+          line-height: 50px; /* Centraliza texto verticalmente */
+          /* Opcional: alinhamento vertical */
+          vertical-align: top; /* ou middle, bottom */
+          box-sizing: border-box;
+          padding: 10px
 
         }
+        
+        
+        </style>
     </style>
 </head>
 <body>
-    <h1>Contador</h1>
+<tbody></tbody>
+    <div class="cont">
+    <h1>Contador1</h1>
+
+    <p>0</p>
+    <button class="menos" onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+    
+</div>
+<div class="cont">
+    <h1>Contador2</h1>
+
+    <p id="2">0</p>
+
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+</div>
+<div class="cont">
+    <h1>Contador3</h1>
 
     <p>0</p>
 
-    <button onclick="adicionar()"> ADICIONAR NUMERO</button>
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+</div>
+<div class="cont">
+    <h1>Contador4</h1>
+
+    <p>0</p>
+
+    <button class="menos" onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+
+    
+</div>
+
+<div class="cont">
+    <h1>Contador5</h1>
+
+    <p>0</p>
+
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+</div>
+<div class="cont">
+    <h1>Contador6</h1>
+
+    <p>0</p>
+
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+</div>
+<div class="cont">
+    <h1>Contador7</h1>
+
+    <p>0</p>
+
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+</div>
+<div class="cont">
+    <h1>Contador8</h1>
+
+    <p>0</p>
+
+    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+
+
+    
+</div>
+
 
     <script>
         var numero = 0
 
-        function adicionar() {            
+        function mais() {            
             numero = numero + 1            
-            document.querySelector("p").innerText = numero
+            document.getElementById("2").innerText = numero
+        }
+        function menos() {            
+            numero = numero - 1            
+            document.querySelector("1").innerText = numero
         }
 
     </script>
