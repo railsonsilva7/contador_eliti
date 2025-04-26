@@ -27,8 +27,8 @@
     <div class="cont">
     <h1>Contador1</h1>
 
-    <p>0</p>
-    <button class="menos" onclick="menos()"> - </button><button onclick="mais()"> + </button>
+    <p id="1">0</p>
+    <button onclick="menosc1()"> - </button><button onclick="maisc1()"> + </button>
 
     
 </div>
@@ -37,23 +37,23 @@
 
     <p id="2">0</p>
 
-    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+    <button onclick="menosc2()"> - </button><button onclick="maisc2()"> + </button>
 
 </div>
 <div class="cont">
     <h1>Contador3</h1>
 
-    <p>0</p>
+    <p id="3">0</p>
 
-    <button onclick="menos()"> - </button><button onclick="mais()"> + </button>
+    <button onclick="menosc3()"> - </button><button onclick="maisc3()"> + </button>
 
 </div>
 <div class="cont">
     <h1>Contador4</h1>
 
-    <p>0</p>
+    <p id="4">0</p>
 
-    <button class="menos" onclick="menos()"> - </button><button onclick="mais()"> + </button>
+    <button class="menos" onclick="menosc4()"> - </button><button onclick="maisc4()"> + </button>
 
 
     
@@ -96,15 +96,42 @@
 
 
     <script>
-        var numero = 0
+        var numero1 = 0
 
-        function mais() {            
-            numero = numero + 1            
+        function maisc1() {            
+            numero1++            
+            document.getElementById("1").innerText = numero1
+        }
+        function menosc1() {            
+            numero = numero - 1            
+            document.getElementById("1").innerText = numero1
+        }
+
+
+        var numero2 = 0    
+        function maisc2() {            
+            numero2++            
+            document.getElementById("2").innerText = numero2
+        }
+        function menosc2() {            
+            numero = numero - 1            
             document.getElementById("2").innerText = numero
         }
-        function menos() {            
+        function maisc3() {            
+            numero++            
+            document.getElementById("3").innerText = numero
+        }
+        function menosc3() {            
             numero = numero - 1            
-            document.querySelector("1").innerText = numero
+            document.getElementById("3").innerText = numero
+        }
+        function maisc4() {            
+            numero++            
+            document.getElementById("4").innerText = numero
+        }
+        function menosc4() {            
+            numero = numero - 1            
+            document.getElementById("4").innerText = numero
         }
 
     </script>
